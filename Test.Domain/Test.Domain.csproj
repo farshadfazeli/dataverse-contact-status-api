@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Data8.PowerPlatform.Dataverse.Client" Version="2.4.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="CrmEntities\Resources\ContactResource.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ContactResource.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Update="CrmEntities\Resources\ContactResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ContactResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
